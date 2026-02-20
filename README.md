@@ -1,5 +1,8 @@
 # Micro Marketplace App (Backend + Web + Mobile)
 
+Demo Video (Unlisted): https://youtu.be/HZtWNHJgXqU  
+Web App (Live): https://micro-marketplace-shw4.vercel.app/
+
 Full Stack Developer Intern Assignment project:
 - `backend` (Node.js + Express + MongoDB)
 - `web-app` (React + Vite)
