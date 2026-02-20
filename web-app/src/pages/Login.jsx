@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const API_URL = "http://localhost:5000";
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -67,7 +67,7 @@ export default function Login() {
       if (err.response?.data?.message) {
         setError(err.response.data.message);
       } else if (err.code === "ERR_NETWORK") {
-        setError("Cannot connect to backend. Start backend on http://localhost:5000.");
+        setError(`Cannot connect to backend. Check VITE_API_URL (${API_URL}).`);
       } else {
         setError("Request failed");
       }
